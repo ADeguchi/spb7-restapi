@@ -1,0 +1,1 @@
+INSERT INTO task (name, completed) VALUES ('タスク１ ', false);
