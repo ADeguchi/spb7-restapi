@@ -20,26 +20,26 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RestController
 
-public class TaskController {
-	private final TaskRepository repository;
+public class CustomerController {
+	private final CustomerRepository repository;
 	
 	@Operation(summary = "タスクのテスト")
 	@RequestMapping("/")
-	Task test() {
-		return new Task((long)1,"タスクのサンプル",false);
+	CustomerEntity test() {
+		return new CustomerEntity((long)1,"タスクのサンプル");
 	}
 	
 	@Operation(summary = "タスクの全件取得")
 	@GetMapping("/view")
-	List<Task> findAll() {
+	List<CustomerEntity> findAll() {
 		return repository.findAll();
 	}
 	
 	@Operation(summary = "タスクの登録")
 	//@PostMapping("/comp")
 	@PostMapping("/create")
-	Task save(@RequestBody Task task) {
-		return repository.save(task);
+	CustomerEntity save(@RequestBody CustomerEntity customerEntity) {
+		return repository.save(customerEntity);
 	}
 	
 	@Operation(summary = "タスクの削除")
@@ -50,13 +50,13 @@ public class TaskController {
 	
 	@Operation(summary = "タスクの１件取得")
 	@GetMapping("/view/{id}")
-	Task findOne(@PathVariable Long id) {
+	CustomerEntity findOne(@PathVariable Long id) {
 		return repository.findById(id).get();
 	}
 	
 	@Operation(summary = "タスクの更新")
 	@PutMapping("/update/{id}")
-	Task save(@RequestBody Task updateTask, @PathVariable Long id) {
-		return repository.save(updateTask);
+	CustomerEntity save(@RequestBody CustomerEntity updateCustomer, @PathVariable Long id) {
+		return repository.save(updateCustomer);
 	}
 }

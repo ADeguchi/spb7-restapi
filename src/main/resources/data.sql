@@ -1,1 +1,1 @@
-INSERT INTO task (name, completed) VALUES ('タスク１ ', false);
+INSERT INTO customer (name) VALUES ('山田太郎 ');

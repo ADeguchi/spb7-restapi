@@ -5,10 +5,9 @@ import java.io.Serializable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-//import org.springframework.data.annotation.Id;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -21,9 +20,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Table(name = "customer")
 //public class Task {
-public class Task implements Serializable {
+public class CustomerEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +33,5 @@ public class Task implements Serializable {
 	@Size(max = 255)
 	@JsonProperty("name")
 	private String name;
-	
-	@NotNull
-	@JsonProperty("completed")
-	private Boolean completed;
+
 }
