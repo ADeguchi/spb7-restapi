@@ -1,1 +1,12 @@
 INSERT INTO customer (name) VALUES ('山田太郎 ');
+INSERT INTO customer (name) VALUES ('佐藤花子 ');
+INSERT INTO customer (name) VALUES ('高田太郎 ');
+INSERT INTO customer (name) VALUES ('伊藤 ');
+INSERT INTO customer (name) VALUES ('武藤 ');
+INSERT INTO customer (name) VALUES ('アレックス ');
+INSERT INTO customer (name) VALUES ('ジェーン ');
+INSERT INTO customer (name) VALUES ('マイケル ');
+INSERT INTO customer (name) VALUES ('田中 ');
+INSERT INTO customer (name) VALUES ('中岡 ');
+INSERT INTO customer (name) VALUES ('久保 ');
+INSERT INTO customer (name) VALUES ('村山 ');

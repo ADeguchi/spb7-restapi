@@ -37,7 +37,6 @@ public class CustomerController {
 	}
 	
 	@Operation(summary = "顧客情報の登録")
-	//@PostMapping("/comp")
 	@PostMapping("/create")
 	CustomerEntity save(@RequestBody CustomerEntity customerEntity) {
 		return repository.save(customerEntity);
